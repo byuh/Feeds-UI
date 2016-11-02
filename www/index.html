@@ -110,7 +110,7 @@ function onDeviceReady(){
         <div class="mainbody" >
         <div class="container-fluid">
           <div class="row spacing">
-              <div class="col-xs-4"><a onclick="window.location.href='calendar.html'"><center><img src="images/byuh-icons/calendar.png" class="indeximages"  alt=""/><br>CALENDAR</center></a></div>
+              <div class="col-xs-4"><a onclick="window.location.href='calendar.html'"><img src="images/byuh-icons/calendar.png" class="indeximages"  alt=""/><br><div class="linktext"><center>CALENDAR</center></div></a></div>
               <div class="col-xs-4"><a onclick="window.location.href='campusmap.html'"><center><img src="images/byuh-icons/campus-map.png"  class="indeximages" alt=""/><br>CAMPUS MAP</center></a></div>
               <div class="col-xs-4"><a onclick="window.location.href='foodmenu.html'"><center><img src="images/byuh-icons/dining.png"  class="indeximages" alt=""/><br>DINING</center></a></div>
           </div>
@@ -120,8 +120,18 @@ function onDeviceReady(){
               <div class="col-xs-4"><center><img src="images/byuh-icons/mydash.png"  class="indeximages" alt=""/><br>MYDASH</center></div>
           </div>
             <div class="row spacing">
-            <div class="col-xs-4"><center><img src="images/byuh-icons/academic-calendar.png"  class="indeximages" alt=""/><br>ACADEMICS</center></div>
-              <div class="col-xs-4"><center><img src="images/byuh-icons/canvas.png"  class="indeximages" alt=""/><br>CANVAS</center></div>
+                 <script src="intelxdk.js"></script>
+                <script src="cordova.js"></script>
+            <div class="col-xs-4"><script>
+        function openExternal(elem) {
+            window.open(elem.href, "_system");
+            return false; // Prevent execution of the default onClick handler 
+        }
+    </script>
+    <a href="https://academics.byuh.edu/academicdates" onClick="javascript:return openExternal(this)">
+<center><img src="images/byuh-icons/academic-calendar.png"  class="indeximages" alt=""/><br>ACADEMICS</center></a></div>
+                <div class="col-xs-4"><a href="#" onclick="window.open('https://byuh.instructure.com/login/ldap', '_system');">
+<center><img src="images/byuh-icons/canvas.png"  class="indeximages" alt=""/><br>CANVAS</center></a></div>
               <div class="col-xs-4"><center><img src="images/byuh-icons/emergency.png"  class="indeximages" alt=""/><br>EMERGENCY</center></div>
           </div>
         </div>
@@ -140,6 +150,5 @@ function onDeviceReady(){
   </div>
 </div>
 </footer>
-    </body>
-
+</body>
 </html>
